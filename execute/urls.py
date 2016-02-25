@@ -13,14 +13,17 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import include, url
+from django.conf.urls import url
+
 from . import views
 
 urlpatterns = [
-    url(r'^minions_shell_runcmd', views.shell_runcmd,name='shell_runcmd'),
-    url(r'^minions_salt_runcmd', views.salt_runcmd,name='salt_runcmd'),
-    url(r'^minions_shell_result', views.shell_result,name='shell_result'),
-    url(r'^minions_salt_get', views.salt_get,name='salt_get'),	
-    url(r'^minions_get_result', views.salt_get_result,name='salt_get_result'),
-    url(r'^minions_salt_tools', views.salt_tools,name='salt_tools'),
+    url(r'^minions_shell_runcmd', views.shell_runcmd, name='shell_runcmd'),
+    url(r'^minions_salt_runcmd', views.salt_runcmd, name='salt_runcmd'),
+    url(r'^minions_shell_result', views.shell_result, name='shell_result'),
+    url(r'^minions_salt_get', views.salt_get, name='salt_get'),
+    url(r'^minions_get_result', views.salt_get_result, name='salt_get_result'),
+    url(r'^minions_salt_tools', views.salt_tools, name='salt_tools'),
+    url(r'^minions_salt_pre', views.salt_pre, name='salt_pre'),
+    url(r'^minions_pre_result', views.salt_pre_result, name='salt_pre_result'),
 ]

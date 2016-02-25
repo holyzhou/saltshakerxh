@@ -1,14 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
 
+
 def login_view(request):
     msg = []
-    #if request.GET:
+    # if request.GET:
     #    request.session['login_from'] = request.META.get('HTTP_REFERER', '/')
-    #elif request.POST:
+    # elif request.POST:
     if request.POST:
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -23,7 +24,7 @@ def login_view(request):
             msg.append("Password error")
     return render(request, 'account/login.html', {'errors': msg})
 
+
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect('../account/login')
-

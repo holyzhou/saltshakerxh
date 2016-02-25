@@ -1,10 +1,5 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from shaker.shaker_core import *
-import json
-import os
-
-
 
 
 @login_required(login_url="/account/login/")
@@ -15,9 +10,12 @@ def index(request):
     os_release = data[1].split('\n')[0]
     os_all = data[2].split('\n')[0]
 
-    return render(request, 'dashboard/index.html', {
-            'status': status_list,
-            'os_release': os_release,
-            'os_all': os_all,
-            })
+    print status_list
+    print os_release
+    print os_all
 
+    return render(request, 'dashboard/index.html', {
+        'status': status_list,
+        'os_release': os_release,
+        'os_all': os_all,
+    })

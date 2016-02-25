@@ -1,13 +1,17 @@
-from django.shortcuts import render
-from shaker.shaker_core import *
-from django.contrib.auth.decorators import login_required
 import os
+
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+
+from shaker.shaker_core import *
+
 
 @login_required(login_url="/account/login/")
 def jobs_history(request):
     sapi = SaltAPI()
     jids = sapi.runner("jobs.list_jobs")
     return render(request, 'jobs/jobs_history.html', {'jids': jids})
+
 
 @login_required(login_url="/account/login/")
 def jobs_manage(request):
@@ -19,11 +23,13 @@ def jobs_manage(request):
     jids_running = sapi.runner("jobs.active")
     return render(request, 'jobs/jobs_manage.html', {'jids_running': jids_running})
 
+
 @login_required(login_url="/account/login/")
-def jobs_detail(request,jid):
+def jobs_detail(request, jid):
     jids = "salt-run jobs.lookup_jid" + " " + jid
     detail = os.popen(jids).read()
     return render(request, 'jobs/jobs_detail.html', {'detail': detail})
+
 
 @login_required(login_url="/account/login/")
 def jobs_schedule(request):

@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
-from shaker.shaker_core import *
+
 from shaker.nodegroups import *
 
 
@@ -11,6 +10,7 @@ def manage_group(request):
     group = NodeGroups()
     all_group = group.list_groups()
     return render(request, 'groups/manage_group.html', {'list_groups': all_group})
+
 
 @login_required(login_url="/account/login/")
 def add_group(request):
@@ -22,6 +22,7 @@ def add_group(request):
             group.add_groups(group_name)
             return HttpResponse(group_name)
 
+
 @login_required(login_url="/account/login/")
 def del_group(request):
     group = NodeGroups()
@@ -32,6 +33,7 @@ def del_group(request):
             group.del_groups(group_name)
             return HttpResponse(group_name)
 
+
 @login_required(login_url="/account/login/")
 def modify_group(request):
     group = NodeGroups()
@@ -41,11 +43,13 @@ def modify_group(request):
         group.modify_groups(group_name, modify_group_name)
         return HttpResponse(group_name)
 
+
 @login_required(login_url="/account/login/")
 def manage_host(request):
     group = NodeGroups()
     all = group.list_groups_hosts()
     return render(request, 'groups/manage_host.html', {'list_groups': all})
+
 
 @login_required(login_url="/account/login/")
 def add_host(request):
@@ -56,6 +60,7 @@ def add_host(request):
         host.add_hosts(group_name, host_name)
         return HttpResponse(host_name)
 
+
 @login_required(login_url="/account/login/")
 def del_host(request):
     host = NodeGroups()
@@ -64,10 +69,3 @@ def del_host(request):
         host_name = request.POST.get("hosts_name")
         host.del_hosts(group_name, host_name)
         return HttpResponse(host_name)
-
-
-
-
-
-
-

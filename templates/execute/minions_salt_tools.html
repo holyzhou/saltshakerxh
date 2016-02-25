@@ -1,43 +1,43 @@
 {% extends "base.html" %}
-  {% block content %}
+{% block content %}
 
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Web It Tools</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-<div class="panel panel-default">
-  <div class="panel-heading">清理JS缓存</div>
-  <div class="panel-body">
+<div id="page-wrapper">
     <div class="row">
-                                <div class="col-lg-5">
-                                    <form class="form-inline"  method="get" action="../execute/minions_get_result" >
-                                        <div class="form-group">
-                                            <label>JS缓存文件名称</label>
-                                		<input class="form-control" placeholder="Enter Js Name" >
-                                        </div>
-                                        <input id="submit_id1" type="button" class="btn btn-primary" value="提交">
-                                    </form>
-                                        <p id="p_id"></p>
-                                </div>
-                            </div>
-                            <!-- /.row (nested) --> 
-  </div>
-</div>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
+        <div class="col-lg-12">
+            <h1 class="page-header">Web It Tools</h1>
         </div>
-        <!-- /#page-wrapper -->
-
+        <!-- /.col-lg-12 -->
     </div>
-    <!-- /#wrapper -->
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">清理JS缓存</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <form class="form-inline" method="get" action="../execute/minions_get_result">
+                                <div class="form-group">
+                                    <label>JS缓存文件名称</label>
+                                    <input class="form-control" placeholder="Enter Js Name">
+                                </div>
+                                <input id="submit_id1" type="button" class="btn btn-primary" value="提交">
+                            </form>
+                            <p id="p_id"></p>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
 
-  {% endblock %}
+</div>
+<!-- /#wrapper -->
+
+{% endblock %}
 
