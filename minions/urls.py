@@ -13,13 +13,12 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
-
+from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
-    url(r'^minions_status', views.minions_status, name='minions_status'),
-    url(r'^minions_keys', views.minions_keys, name='minions_keys'),
-    url(r'^minions_hardware_info', views.minions_hardware_info, name='minions_hardware_info'),
-    url(r'^minions_servers_status', views.minions_servers_status, name='minions_servers_status'),
+    url(r'^minions_status', views.minions_status,name='minions_status'),
+    url(r'^minions_keys', views.minions_keys,name='minions_keys'),
+    url(r'^minions_hardware_info', views.minions_hardware_info,name='minions_hardware_info'),
+    url(r'^minions_servers_status', views.minions_servers_status,name='minions_servers_status'),
 ]

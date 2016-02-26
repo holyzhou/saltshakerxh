@@ -1,6 +1,5 @@
 from shaker.shaker_core import *
 
-
 def dashboard_scheduled_job():
     # minion status
     status_list = []
@@ -25,10 +24,10 @@ def dashboard_scheduled_job():
     jid = []
     for hostname in up_host:
         info_all = sapi.remote_noarg_execution(hostname, 'grains.items')
-        osfullname = sapi.grains(hostname, 'osfullname')[hostname]['osfullname'].decode('string-escape')
-        osrelease = sapi.grains(hostname, 'osrelease')[hostname]['osrelease'].decode('string-escape')
-        # osfullname = info_all['osfullname'].decode('string-escape')
-        # osrelease = info_all['osrelease'].decode('string-escape')
+        osfullname = sapi.grains(hostname,'osfullname')[hostname]['osfullname'].decode('string-escape')
+        osrelease = sapi.grains(hostname,'osrelease')[hostname]['osrelease'].decode('string-escape')
+        #osfullname = info_all['osfullname'].decode('string-escape')
+        #osrelease = info_all['osrelease'].decode('string-escape')
         os = osfullname + osrelease
         os_list.append(os)
         jid += [info_all]
@@ -45,12 +44,11 @@ def dashboard_scheduled_job():
     salt_dashboard.writelines(str(os_all) + '\n')
     salt_dashboard.close()
 
-    salt_file = file("/tmp/salt_file.tmp", "w+")
-    salt_file.writelines("up_host=%s\n" % (up_host))
-    salt_file.writelines("down_host=%s\n" % (down_host))
-    salt_file.writelines("key_status=%s\n" % (key_status))
-    salt_file.writelines("jid=%s\n" % (jid))
+    salt_file = file("/tmp/salt_file.tmp","w+")
+    salt_file.writelines("up_host=%s\n" %(up_host))
+    salt_file.writelines("down_host=%s\n" %(down_host))
+    salt_file.writelines("key_status=%s\n" %(key_status))
+    salt_file.writelines("jid=%s\n" %(jid))
     salt_file.close()
-
 
 dashboard = dashboard_scheduled_job()

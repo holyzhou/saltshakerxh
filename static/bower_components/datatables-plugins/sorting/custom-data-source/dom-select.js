@@ -8,8 +8,9 @@
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  */
 
-$.fn.dataTable.ext.order['dom-select'] = function (settings, col) {
-    return this.api().column(col, {order: 'index'}).nodes().map(function (td, i) {
-        return $('select', td).val();
-    });
+$.fn.dataTable.ext.order['dom-select'] = function  ( settings, col )
+{
+	return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+		return $('select', td).val();
+	} );
 };

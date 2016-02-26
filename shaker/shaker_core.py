@@ -99,8 +99,7 @@ class SaltAPI(object):
                    'status.uptime', 'service.get_all']:
             params = {'client': 'local', 'tgt': tgt, 'fun': arg, 'expr_form': 'list'}
         elif arg == 'cmd.run':
-            params = {'client': 'local', 'tgt': tgt, 'fun': arg, 'arg1': arg1, 'arg2': 'runas=weihu',
-                      'expr_form': 'list'}
+            params = {'client': 'local', 'tgt': tgt, 'fun': arg, 'arg1': arg1, 'arg2': 'runas=weihu','expr_form': 'list'}
             obj = urllib.urlencode(params)
             obj, number = re.subn("arg\d", 'arg', obj)
             content = self.postRequest(obj)

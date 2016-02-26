@@ -1,4 +1,5 @@
 describe '#parseTime', ->
+
   it 'should parse years', ->
     Morris.parseDate('2012').should.equal(new Date(2012, 0, 1).getTime())
 
@@ -31,4 +32,4 @@ describe '#parseTime', ->
 
   it 'should pass-through timestamps', ->
     Morris.parseDate(new Date(2012, 9, 15, 12, 34, 55, 123).getTime())
-    .should.equal(new Date(2012, 9, 15, 12, 34, 55, 123).getTime())
+      .should.equal(new Date(2012, 9, 15, 12, 34, 55, 123).getTime())

@@ -8,13 +8,12 @@
     <meta name="author" content="">
 
     {% load staticfiles %}
-    <link href="{% static " bower_components
-    /bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "bower_components/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
 </head>
 <body>
-<div class="row">
-    <div class="col-lg-12">
-            <textarea class="form-control" rows="20" style="background: #300a24">
+    <div class="row">
+        <div class="col-lg-12">
+            <textarea class="form-control" rows="20" style="background: #300a24" >
 {{ cmd }}
 {{ line }}
                 {% for hostname,shell_result in result.items %}
@@ -23,8 +22,8 @@ Minions : {{ hostname }}
 {{ shell_result }}
                 {% endfor %}
             </textarea>
+        </div>
     </div>
-</div>
 </body>
 </html>
 

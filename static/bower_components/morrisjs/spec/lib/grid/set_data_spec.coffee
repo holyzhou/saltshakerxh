@@ -1,4 +1,5 @@
 describe 'Morris.Grid#setData', ->
+
   it 'should not alter user-supplied data', ->
     my_data = [{x: 1, y: 1}, {x: 2, y: 2}]
     expected_data = [{x: 1, y: 1}, {x: 2, y: 2}]
@@ -27,6 +28,7 @@ describe 'Morris.Grid#setData', ->
       line.ymax.should.equal 20
 
     describe 'auto', ->
+
       it 'should automatically calculate the minimum and maximum value', ->
         line = Morris.Line $.extend @defaults,
           data: [{x: 1, y: 10}, {x: 2, y: 15}, {x: 3, y: null}, {x: 4}]
@@ -44,6 +46,7 @@ describe 'Morris.Grid#setData', ->
         line.ymax.should.equal 1
 
     describe 'auto [n]', ->
+
       it 'should automatically calculate the minimum and maximum value', ->
         line = Morris.Line $.extend @defaults,
           data: [{x: 1, y: 10}, {x: 2, y: 15}, {x: 3, y: null}, {x: 4}]
@@ -77,6 +80,7 @@ describe 'Morris.Grid#setData', ->
         line.ymax.should.equal 20
 
   describe 'xmin/xmax', ->
+
     it 'should calculate the horizontal range', ->
       line = Morris.Line
         element: 'graph'
@@ -98,6 +102,7 @@ describe 'Morris.Grid#setData', ->
       line.xmax.should == 3
 
   describe 'sorting', ->
+
     it 'should sort data when parseTime is true', ->
       line = Morris.Line
         element: 'graph'
@@ -122,6 +127,7 @@ describe 'Morris.Grid#setData', ->
       line.data.map((row) -> row.label).should.deep.equal [1, 4, 3, 2]
 
   describe 'timestamp data', ->
+
     it 'should generate default labels for timestamp x-values', ->
       d = [
         new Date 2012, 0, 1
@@ -154,7 +160,7 @@ describe 'Morris.Grid#setData', ->
         labels: ['y']
         dateFormat: (ts) ->
           date = new Date(ts)
-          "#{date.getFullYear()}-#{date.getMonth() + 1}-#{date.getDate()}"
+          "#{date.getFullYear()}-#{date.getMonth()+1}-#{date.getDate()}"
       line.data.map((row) -> row.label).should.deep.equal ['2012-1-1', '2012-1-2', '2012-1-3', '2012-1-4']
 
   it 'should parse y-values in strings', ->

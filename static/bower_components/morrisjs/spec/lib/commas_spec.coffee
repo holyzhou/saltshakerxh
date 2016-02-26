@@ -1,6 +1,7 @@
 describe '#commas', ->
+
   it 'should insert commas into long numbers', ->
-# zero
+    # zero
     Morris.commas(0).should.equal("0")
 
     # positive integers

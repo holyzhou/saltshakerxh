@@ -1,57 +1,57 @@
 {% extends "base.html" %}
-{% block content %}
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="page-header">Dashboard</h2>
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Minios Status
+  {% block content %}
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header">Dashboard</h2>
                 </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body" style="height:250px">
-                    <div id="main" style="height:250px"></div>
-                </div>
-                <!-- /.panel-body -->
+                <!-- /.col-lg-12 -->
             </div>
-            <!-- /.panel -->
-        </div>
-        <!-- /.col-lg-6 -->
-        <div class="col-lg-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    OS Release
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Minios Status
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body" style="height:250px">
+                            <div id="main" style="height:250px"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
                 </div>
-                <!-- /.panel-heading -->
-                <div class="panel-body" style="height:250px">
-                    <div id="main1" style="height:250px"></div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            OS Release
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body" style="height:250px">
+                           <div id="main1" style="height:250px"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
                 </div>
-                <!-- /.panel-body -->
             </div>
-            <!-- /.panel -->
+            <!-- /.row -->
         </div>
-    </div>
-    <!-- /.row -->
-</div>
-<!-- /#page-wrapper -->
-<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+        <!-- /#page-wrapper -->
+      <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
 
-<script type="text/javascript">
-    // 路径配置
-    require.config({
-        paths: {
-            echarts: 'http://echarts.baidu.com/build/dist'
-        }
-    });
+      <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
 
-    // 使用
-    require(
+        // 使用
+        require(
             [
                 'echarts',
                 'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
@@ -59,7 +59,7 @@
             ],
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('main'), 'macarons');
+                var myChart = ec.init(document.getElementById('main'),'macarons');
 
                 var option = {
                     title: {
@@ -106,10 +106,10 @@
                             type: 'bar',
                             itemStyle: {
                                 normal: {
-                                    color: function (params) {
+                                    color: function(params) {
                                         // build a color map as your need.
                                         var colorList = [
-                                            '#B5C334', '#C1232B', '#FCCE10', '#E87C25', '#27727B',
+                                          '#B5C334','#C1232B','#FCCE10','#E87C25','#27727B',
                                         ];
                                         return colorList[params.dataIndex]
                                     },
@@ -120,55 +120,44 @@
                                     }
                                 }
                             },
-                            data: {{status | safe
-                }
-            },
-            markPoint
-    :
-    {
-        tooltip: {
-            trigger: 'item',
-                    backgroundColor
-        :
-            'rgba(0,0,0,0)',
-                    formatter
-        :
-            function (params) {
-                return '<img src="'
-                        + params.data.symbol.replace('image://', '')
-                        + '"/>';
+                            data: {{ status|safe }},
+                            markPoint: {
+                                tooltip: {
+                                    trigger: 'item',
+                                    backgroundColor: 'rgba(0,0,0,0)',
+                                    formatter: function(params){
+                                        return '<img src="'
+                                                + params.data.symbol.replace('image://', '')
+                                                + '"/>';
+                                    }
+                                },
+                                data: [
+                                    {xAxis:0, y: 350, name:'Line', symbolSize:20, symbol: ''},
+                                    {xAxis:1, y: 350, name:'Bar', symbolSize:20, symbol: ''},
+                                    {xAxis:2, y: 350, name:'Scatter', symbolSize:20, symbol: ''},
+                                    {xAxis:3, y: 350, name:'K', symbolSize:20, symbol: ''},
+                                    {xAxis:4, y: 350, name:'Pie', symbolSize:20, symbol: ''},
+                                ]
+                            }
+                        }
+                    ]
+                };
+                // 为echarts对象加载数据
+                myChart.setOption(option);
             }
-        }
-    ,
-        data: [
-            {xAxis: 0, y: 350, name: 'Line', symbolSize: 20, symbol: ''},
-            {xAxis: 1, y: 350, name: 'Bar', symbolSize: 20, symbol: ''},
-            {xAxis: 2, y: 350, name: 'Scatter', symbolSize: 20, symbol: ''},
-            {xAxis: 3, y: 350, name: 'K', symbolSize: 20, symbol: ''},
-            {xAxis: 4, y: 350, name: 'Pie', symbolSize: 20, symbol: ''},
-        ]
-    }
-    }
-    ]
-    }
-    ;
-    // 为echarts对象加载数据
-    myChart.setOption(option);
-    }
-    )
-    ;
-</script>
+        );
+      </script>
 
-<script type="text/javascript">
-    // 路径配置
-    require.config({
-        paths: {
-            echarts: 'http://echarts.baidu.com/build/dist'
-        }
-    });
+      <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
 
-    // 使用
-    require(
+        // 使用
+        require(
             [
                 'echarts',
                 'echarts/chart/pie', // 使用柱状图就加载bar模块，按需加载
@@ -176,97 +165,60 @@
             ],
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('main1'), 'macarons');
+                var myChart = ec.init(document.getElementById('main1'),'macarons');
 
                 var option = {
-                    title: {
+                    title : {
                         text: '',
                         subtext: '',
-                        x: 'center'
+                        x:'center'
                     },
-                    tooltip: {
+                    tooltip : {
                         trigger: 'item',
                         formatter: "{a} <br/>{b} : {c} ({d}%)"
                     },
                     legend: {
-                        orient: 'vertical',
-                        x: 'left',
-                        data: {
-                {
-                    os_release | safe
-                }
+                        orient : 'vertical',
+                        x : 'left',
+                        data:{{ os_release|safe }}
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {
+                                show: true,
+                                type: ['pie', 'funnel'],
+                                option: {
+                                    funnel: {
+                                        x: '29%',
+                                        width: '50%',
+                                        funnelAlign: 'left',
+                                        max: 1548
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'OS Release',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['55%', '56%'],
+                            data:{{ os_all|safe }}
+                        }
+                    ]
+                };
+                // 为echarts对象加载数据
+                myChart.setOption(option);
             }
-    },
-    toolbox: {
-        show : true,
-                feature
-    :
-        {
-            mark : {
-                show: true
-            }
-        ,
-            dataView : {
-                show: true, readOnly
-            :
-                false
-            }
-        ,
-            magicType : {
-                show: true,
-                        type
-            :
-                ['pie', 'funnel'],
-                        option
-            :
-                {
-                    funnel: {
-                        x: '29%',
-                                width
-                    :
-                        '50%',
-                                funnelAlign
-                    :
-                        'left',
-                                max
-                    :
-                        1548
-                    }
-                }
-            }
-        ,
-            restore : {
-                show: true
-            }
-        ,
-            saveAsImage : {
-                show: true
-            }
-        }
-    }
-    ,
-    calculable : true,
-            series
-    :
-    [
-        {
-            name: 'OS Release',
-            type: 'pie',
-            radius: '55%',
-            center: ['55%', '56%'],
-            data: {{os_all | safe
-    }
-    }
-    }
-    ]
-    }
-    ;
-    // 为echarts对象加载数据
-    myChart.setOption(option);
-    }
-    )
-    ;
-</script>
+        );
+  </script>
 
-{% endblock %}
+  {% endblock %}
 

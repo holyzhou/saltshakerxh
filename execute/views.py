@@ -1,10 +1,11 @@
 import subprocess
-import os
 
 from django.shortcuts import render, HttpResponse
+
 from django.contrib.auth.decorators import login_required
 
 from shaker.shaker_core import *
+
 from shaker.nodegroups import *
 
 
@@ -15,11 +16,11 @@ def shell_runcmd(request):
     CMD = ['cmd.run', 'state.sls', 'cmd.script', 'cp.get_dir', 'cp.get_file', 'cp.get_url', 'cron.ls', 'disk.usage',
            'grains.item', 'grains.items', 'network.interface', 'service.status', 'service.start', 'service.restart',
            'service.get_all', 'state.running', 'state.highstate', 'status.uptime', 'status.meminfo', 'test.ping']
-    TAG = {'deploy': 'deploy', 'scf': '/usr/bin/scf', 'f5node': '/usr/bin/f5node',
-           'oic_md5': 'md5sum  /ytxt/jboss/server/default/deploy/operations-client.war',
-           'uic_md5': 'md5sum  /ytxt/jboss/server/default/deploy/uic-client.war',
-           'pic_md5': 'md5sum  /ytxt/jboss/server/default/deploy/productClient-1.0.4.war',
-           'cic_md5': 'md5sum  /ytxt/jboss/server/default/deploy/cic-content.war', 'rollback': 'rollback'}
+    TAG = [('deploy', 'deploy'), ('scf', '/usr/bin/scf'), ('rollback', 'rollback'), ('f5node', '/usr/bin/f5node'),
+           ('md5_oic', 'md5sum  /ytxt/jboss/server/default/deploy/operations-client.war'),
+           ('md5_uic', 'md5sum  /ytxt/jboss/server/default/deploy/uic-client.war'),
+           ('md5_pic', 'md5sum  /ytxt/jboss/server/default/deploy/productClient-1.0.4.war'),
+           ('md5_cic', 'md5sum  /ytxt/jboss/server/default/deploy/cic-content.war')]
     return render(request, 'execute/minions_shell_runcmd.html', {'list_groups': all, 'cmds': CMD, 'tags': TAG})
 
 

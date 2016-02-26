@@ -2645,3 +2645,284 @@ Quit the server with CONTROL-C.
 [25/Feb/2016 12:38:03] "GET /execute/minions_pre_result?pj_name=cic-content&md5_value= HTTP/1.1" 200 146
 [25/Feb/2016 12:38:15] "GET /execute/minions_pre_result?pj_name=cic-content&md5_value=1111 HTTP/1.1" 200 71
 [25/Feb/2016 12:39:05] "GET /execute/minions_pre_result?pj_name=cic-content&md5_value=a398f25e573345a6bfff6e9816c3ee32 HTTP/1.1" 200 154
+[25/Feb/2016 14:19:09] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 302 0
+[25/Feb/2016 14:19:09] "GET /account/login/?next=/execute/minions_shell_runcmd.html HTTP/1.1" 200 4319
+[25/Feb/2016 14:19:13] "POST /account/account/login.html HTTP/1.1" 302 0
+[25/Feb/2016 14:19:13] "GET / HTTP/1.1" 200 18988
+[25/Feb/2016 14:19:17] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[25/Feb/2016 14:19:18] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[25/Feb/2016 14:19:18] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[25/Feb/2016 14:19:31] "GET /execute/minions_salt_pre.html HTTP/1.1" 200 14177
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 25, 2016 - 11:49:24
+Django version 1.8.9, using settings 'saltshaker.settings'
+Starting development server at http://0.0.0.0:10000/
+Quit the server with CONTROL-C.
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+
+
+
+
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+[25/Feb/2016 14:20:58] "GET /execute/minions_pre_result?pj_name=cic-content&md5_value= HTTP/1.1" 200 71
+[25/Feb/2016 14:31:30] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[25/Feb/2016 14:31:31] "GET /execute/minions_salt_pre.html HTTP/1.1" 200 14177
+[25/Feb/2016 14:31:33] "GET /execute/minions_pre_result?pj_name=cic-content&md5_value= HTTP/1.1" 200 71
+[25/Feb/2016 14:31:35] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[25/Feb/2016 14:31:35] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[25/Feb/2016 14:31:41] "POST /execute/minions_shell_result.html HTTP/1.1" 200 2127
+[25/Feb/2016 14:32:44] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1427
+[25/Feb/2016 14:32:52] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1518
+[25/Feb/2016 14:32:59] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1427
+[25/Feb/2016 14:33:02] "POST /execute/minions_shell_result.html HTTP/1.1" 200 2127
+[25/Feb/2016 14:33:18] "POST /execute/minions_shell_result.html HTTP/1.1" 200 4395
+[25/Feb/2016 14:34:40] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[25/Feb/2016 14:34:46] "GET /execute/minions_get_result?project_name=cul&project_date= HTTP/1.1" 200 33
+[25/Feb/2016 14:35:21] "GET /execute/minions_get_result?project_name=cul&project_date=20160219 HTTP/1.1" 200 168
+[25/Feb/2016 14:37:37] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[25/Feb/2016 14:37:38] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[25/Feb/2016 14:38:10] "GET / HTTP/1.1" 302 0
+[25/Feb/2016 14:38:13] "GET /account/login/?next=/ HTTP/1.1" 200 4319
+[25/Feb/2016 14:38:18] "POST /account/account/login.html HTTP/1.1" 302 0
+[25/Feb/2016 14:38:19] "GET / HTTP/1.1" 200 18988
+[25/Feb/2016 14:38:24] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[25/Feb/2016 14:38:24] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[25/Feb/2016 14:38:30] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[25/Feb/2016 14:42:24] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[25/Feb/2016 14:46:33] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[25/Feb/2016 14:46:33] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[25/Feb/2016 15:21:43] "GET /execute/minions_salt_get.html HTTP/1.1" 302 0
+[25/Feb/2016 15:21:43] "GET /account/login/?next=/execute/minions_salt_get.html HTTP/1.1" 200 4319
+[25/Feb/2016 15:21:47] "POST /account/account/login.html HTTP/1.1" 302 0
+[25/Feb/2016 15:21:48] "GET / HTTP/1.1" 200 18988
+[25/Feb/2016 15:21:50] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[25/Feb/2016 15:21:53] "GET /execute/minions_salt_pre.html HTTP/1.1" 200 14177
+[25/Feb/2016 15:57:38] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[25/Feb/2016 15:57:43] "GET /execute/minions_get_result?project_name=cic&project_date= HTTP/1.1" 200 33
+[25/Feb/2016 15:57:48] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[25/Feb/2016 15:57:48] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[25/Feb/2016 15:59:06] "POST /execute/minions_shell_result.html HTTP/1.1" 200 12359
+[25/Feb/2016 16:00:53] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1376
+[25/Feb/2016 16:03:00] "POST /execute/minions_shell_result.html HTTP/1.1" 200 12354
+[25/Feb/2016 16:03:50] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1376
+[25/Feb/2016 16:06:36] "POST /execute/minions_shell_result.html HTTP/1.1" 200 12349
+[25/Feb/2016 16:07:23] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1376
+[25/Feb/2016 16:09:03] "POST /execute/minions_shell_result.html HTTP/1.1" 200 12351
+[25/Feb/2016 16:09:49] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1376
+[25/Feb/2016 16:11:52] "POST /execute/minions_shell_result.html HTTP/1.1" 200 12357
+[25/Feb/2016 16:12:32] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1376
+[25/Feb/2016 16:14:39] "POST /execute/minions_shell_result.html HTTP/1.1" 200 5437
+[25/Feb/2016 17:58:22] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 302 0
+[25/Feb/2016 17:58:22] "GET /account/login/?next=/execute/minions_shell_runcmd.html HTTP/1.1" 200 4319
+[25/Feb/2016 17:58:26] "POST /account/account/login.html HTTP/1.1" 302 0
+[25/Feb/2016 17:58:27] "GET / HTTP/1.1" 200 18988
+[25/Feb/2016 17:58:29] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[25/Feb/2016 17:58:29] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[25/Feb/2016 17:58:36] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[25/Feb/2016 17:58:49] "GET /execute/minions_salt_pre.html HTTP/1.1" 200 14177
+[25/Feb/2016 17:58:53] "GET /execute/minions_pre_result?pj_name=cic-content&md5_value= HTTP/1.1" 200 71
+[26/Feb/2016 09:47:23] "GET /favicon.ico HTTP/1.1" 404 2936
+[26/Feb/2016 09:47:25] "GET / HTTP/1.1" 302 0
+[26/Feb/2016 09:47:26] "GET /account/login/?next=/ HTTP/1.1" 200 4319
+[26/Feb/2016 09:47:26] "GET /static/bower_components/datatables-responsive/css/dataTables.responsive.css HTTP/1.1" 200 2444
+[26/Feb/2016 09:47:26] "GET /static/bower_components/metisMenu/dist/metisMenu.min.css HTTP/1.1" 200 781
+[26/Feb/2016 09:47:26] "GET /static/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css HTTP/1.1" 200 7616
+[26/Feb/2016 09:47:26] "GET /static/dist/css/sb-admin-2.css HTTP/1.1" 200 5593
+[26/Feb/2016 09:47:26] "GET /static/bower_components/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 21984
+[26/Feb/2016 09:47:26] "GET /static/bower_components/metisMenu/dist/metisMenu.min.js HTTP/1.1" 200 1879
+[26/Feb/2016 09:47:26] "GET /static/bower_components/bootstrap/dist/css/bootstrap.min.css HTTP/1.1" 200 117120
+[26/Feb/2016 09:47:26] "GET /static/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js HTTP/1.1" 200 1942
+[26/Feb/2016 09:47:26] "GET /static/bower_components/bootstrap/dist/js/bootstrap.min.js HTTP/1.1" 200 35452
+[26/Feb/2016 09:47:27] "GET /static/dist/js/sb-admin-2.js HTTP/1.1" 200 1181
+[26/Feb/2016 09:47:27] "GET /static/bower_components/jquery/dist/jquery.min.js HTTP/1.1" 200 84355
+[26/Feb/2016 09:47:27] "GET /static/images/logo.png HTTP/1.1" 200 2860
+[26/Feb/2016 09:47:27] "GET /static/bower_components/datatables/media/js/jquery.dataTables.min.js HTTP/1.1" 200 78746
+[26/Feb/2016 09:47:27] "GET /account/static/images/favicon.ico HTTP/1.1" 404 3254
+[26/Feb/2016 09:47:29] "POST /account/account/login.html HTTP/1.1" 302 0
+[26/Feb/2016 09:47:29] "GET / HTTP/1.1" 200 18988
+[26/Feb/2016 09:47:29] "GET /static/bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0 HTTP/1.1" 200 65452
+[26/Feb/2016 09:47:30] "GET /static/images/favicon.ico HTTP/1.1" 200 4286
+[26/Feb/2016 09:47:35] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[26/Feb/2016 09:47:37] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 09:47:37] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 09:47:38] "GET /execute/minions_salt_pre.html HTTP/1.1" 200 14177
+[26/Feb/2016 09:47:41] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 09:47:41] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 09:50:36] "POST /execute/minions_shell_result.html HTTP/1.1" 200 6448
+[26/Feb/2016 09:51:40] "GET /execute/minions_salt_pre.html HTTP/1.1" 200 14177
+[26/Feb/2016 09:53:50] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[26/Feb/2016 09:53:53] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 09:53:54] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 09:53:55] "GET /execute/minions_salt_pre.html HTTP/1.1" 200 14177
+[26/Feb/2016 09:53:56] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[26/Feb/2016 10:47:02] "GET /groups/manage_host.html HTTP/1.1" 200 21795
+[26/Feb/2016 10:47:04] "GET /groups/manage_group.html HTTP/1.1" 200 27850
+[26/Feb/2016 10:47:09] "GET /groups/manage_host.html HTTP/1.1" 200 21795
+[26/Feb/2016 10:53:05] "GET /groups/manage_host.html HTTP/1.1" 302 0
+[26/Feb/2016 10:53:05] "GET /account/login/?next=/groups/manage_host.html HTTP/1.1" 200 4319
+[26/Feb/2016 10:53:08] "POST /account/account/login.html HTTP/1.1" 302 0
+[26/Feb/2016 10:53:09] "GET / HTTP/1.1" 200 18988
+[26/Feb/2016 10:53:11] "GET /groups/manage_host.html HTTP/1.1" 200 73358
+[26/Feb/2016 10:53:15] "GET /groups/manage_group.html HTTP/1.1" 200 27850
+[26/Feb/2016 10:53:22] "GET /groups/manage_host.html HTTP/1.1" 200 73358
+[26/Feb/2016 10:53:28] "GET /execute/minions_salt_get.html HTTP/1.1" 200 14635
+[26/Feb/2016 10:53:29] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 10:53:30] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 11:13:22] "GET / HTTP/1.1" 302 0
+[26/Feb/2016 11:13:23] "GET /account/login/?next=/ HTTP/1.1" 200 4319
+[26/Feb/2016 11:13:23] "GET /static/bower_components/bootstrap/dist/css/bootstrap.min.css HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/metisMenu/dist/metisMenu.min.css HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/datatables-responsive/css/dataTables.responsive.css HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/dist/css/sb-admin-2.css HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/jquery/dist/jquery.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/bootstrap/dist/js/bootstrap.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/metisMenu/dist/metisMenu.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/datatables/media/js/jquery.dataTables.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/dist/js/sb-admin-2.js HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /static/images/logo.png HTTP/1.1" 304 0
+[26/Feb/2016 11:13:23] "GET /account/static/images/favicon.ico HTTP/1.1" 404 3254
+[26/Feb/2016 11:13:24] "POST /account/account/login.html HTTP/1.1" 302 0
+[26/Feb/2016 11:13:24] "GET / HTTP/1.1" 200 18988
+[26/Feb/2016 11:13:24] "GET /static/bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0 HTTP/1.1" 304 0
+[26/Feb/2016 11:13:27] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 11:13:27] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 11:16:23] "POST /execute/minions_shell_result.html HTTP/1.1" 200 2855
+[26/Feb/2016 11:21:29] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1160
+[26/Feb/2016 11:26:19] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1912
+[26/Feb/2016 11:28:58] "POST /execute/minions_shell_result.html HTTP/1.1" 200 869
+[26/Feb/2016 11:29:18] "POST /execute/minions_shell_result.html HTTP/1.1" 200 893
+[26/Feb/2016 11:30:18] "POST /execute/minions_shell_result.html HTTP/1.1" 200 955
+[26/Feb/2016 11:31:01] "POST /execute/minions_shell_result.html HTTP/1.1" 200 953
+[26/Feb/2016 11:31:27] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 11:31:27] "GET /static/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/bootstrap/dist/css/bootstrap.min.css HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/metisMenu/dist/metisMenu.min.css HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 11:31:27] "GET /static/bower_components/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/datatables-responsive/css/dataTables.responsive.css HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/dist/css/sb-admin-2.css HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/bootstrap/dist/css/bootstrap.min.css HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/jquery/dist/jquery.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/bootstrap/dist/js/bootstrap.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/metisMenu/dist/metisMenu.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/datatables/media/js/jquery.dataTables.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:31:27] "GET /static/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js HTTP/1.1" 304 0
+[26/Feb/2016 11:31:29] "GET /static/dist/js/sb-admin-2.js HTTP/1.1" 304 0
+[26/Feb/2016 11:31:29] "GET /static/images/logo.png HTTP/1.1" 304 0
+[26/Feb/2016 11:31:30] "GET /static/images/favicon.ico HTTP/1.1" 200 4286
+[26/Feb/2016 11:50:06] "POST /execute/minions_shell_result.html HTTP/1.1" 200 948
+[26/Feb/2016 11:50:09] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 11:50:09] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 11:50:22] "POST /execute/minions_shell_result.html HTTP/1.1" 200 948
+[26/Feb/2016 11:51:32] "POST /execute/minions_shell_result.html HTTP/1.1" 200 948
+[26/Feb/2016 11:51:36] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 11:51:37] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 11:52:01] "POST /execute/minions_shell_result.html HTTP/1.1" 200 950
+[26/Feb/2016 11:53:38] "POST /execute/minions_shell_result.html HTTP/1.1" 302 0
+[26/Feb/2016 11:53:38] "GET /account/login/?next=/execute/minions_shell_result.html HTTP/1.1" 200 4319
+[26/Feb/2016 11:53:42] "GET /favicon.ico HTTP/1.1" 404 2936
+[26/Feb/2016 11:53:42] "GET / HTTP/1.1" 302 0
+[26/Feb/2016 11:53:42] "GET /favicon.ico HTTP/1.1" 404 2936
+[26/Feb/2016 11:53:42] "GET /account/login/?next=/ HTTP/1.1" 200 4319
+[26/Feb/2016 11:53:44] "POST /account/account/login.html HTTP/1.1" 302 0
+[26/Feb/2016 11:53:44] "GET / HTTP/1.1" 200 18988
+[26/Feb/2016 11:53:47] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 11:53:47] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 11:54:12] "POST /execute/minions_shell_result.html HTTP/1.1" 200 964
+[26/Feb/2016 11:54:24] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 11:55:22] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 11:55:25] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 11:57:13] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 11:58:35] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 11:58:51] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 11:58:52] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 11:59:00] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 11:59:15] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 11:59:20] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 11:59:32] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 11:59:32] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 11:59:37] "POST /execute/minions_shell_result.html HTTP/1.1" 200 1013
+[26/Feb/2016 12:02:29] "POST /execute/minions_shell_result.html HTTP/1.1" 200 891
+[26/Feb/2016 12:37:19] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 12:37:19] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 25, 2016 - 14:20:55
+Django version 1.8.9, using settings 'saltshaker.settings'
+Starting development server at http://0.0.0.0:10000/
+Quit the server with CONTROL-C.
+
+
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+
+
+
+
+
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+
+
+
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+
+
+
+[170, 0, 170, 4, 0]
+['CentOS6.5', 'Red Hat Enterprise Linux Server5.5', 'CentOS6.3']
+[{'name': 'CentOS6.5', 'value': 96}, {'name': 'Red Hat Enterprise Linux Server5.5', 'value': 3}, {'name': 'CentOS6.3', 'value': 71}]
+
+
+
+
+[26/Feb/2016 12:39:23] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 12:39:23] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 26, 2016 - 12:39:22
+Django version 1.8.9, using settings 'saltshaker.settings'
+Starting development server at http://0.0.0.0:10000/
+Quit the server with CONTROL-C.
+
+[26/Feb/2016 12:43:53] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 500 115162
+[26/Feb/2016 12:43:54] "GET /favicon.ico HTTP/1.1" 500 114575
+[26/Feb/2016 12:44:06] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 500 115024
+[26/Feb/2016 12:44:07] "GET /favicon.ico HTTP/1.1" 500 114575
+[26/Feb/2016 12:45:24] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 12:45:24] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
+[26/Feb/2016 12:46:34] "GET /execute/minions_shell_runcmd.html HTTP/1.1" 200 88915
+[26/Feb/2016 12:46:34] "GET /execute/minions_shell_result.html HTTP/1.1" 200 616
