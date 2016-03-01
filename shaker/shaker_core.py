@@ -174,7 +174,7 @@ class SaltAPI(object):
         obj = urllib.urlencode(params)
         obj, number = re.subn("arg\d", 'arg', obj)
         content = self.postRequest(obj)
-        ret = content['return'][0]['jid']
+        jid = content['return'][0]['jid']
         return jid
 
     def jobs_list(self):
