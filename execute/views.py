@@ -49,6 +49,7 @@ def salt_get(request):
     return render(request, 'execute/minions_salt_get.html', {'applist': APP})
 
 
+#获取生产环境最新应用包
 @login_required(login_url="/account/login/")
 def salt_get_result(request):
     pkage = request.GET.get("project_name").strip()
@@ -75,7 +76,7 @@ def salt_pre(request):
            'ClientWap']
     return render(request, 'execute/minions_salt_pre.html', {'applist': APP})
 
-
+#预发环境部署
 @login_required(login_url="/account/login/")
 def salt_pre_result(request):
     sapi = SaltAPI()
