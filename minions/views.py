@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from shaker.shaker_core import *
 from shaker.nodegroups import *
-
+#本地缓存主机信息
 execfile('/tmp/salt_file.tmp')
 
 @login_required(login_url="/account/login/")
