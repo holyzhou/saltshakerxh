@@ -169,16 +169,12 @@ class SaltAPI(object):
         a=arg.split()
         if len(a) == 2:
             params = {'client': 'local_async', 'tgt': tgt, 'fun': 'state.sls', 'arg1': a[0], 'arg2': a[1], 'expr_form': 'list'}
-            obj = urllib.urlencode(params)
-            obj, number = re.subn("arg\d", 'arg', obj)
-            content = self.postRequest(obj)
-            ret = content['return'][0]['jid']
-            return jid
         else:
             params = {'client': 'local_async', 'tgt': tgt, 'fun': 'state.sls', 'arg': arg, 'expr_form': 'list'}
         obj = urllib.urlencode(params)
+        obj, number = re.subn("arg\d", 'arg', obj)
         content = self.postRequest(obj)
-        jid = content['return'][0]['jid']
+        ret = content['return'][0]['jid']
         return jid
 
     def jobs_list(self):
