@@ -92,7 +92,7 @@ class SaltAPI(object):
         content = self.postRequest(obj)
         ret = content['return'][0][tgt]
         return ret
-
+#定义salt多fun模式，指定cmd.run运行用户
     def shell_remote_execution(self, tgt, arg, arg1):
         ''' Shell command execution with parameters '''
         if arg in ['disk.usage', 'network.interfaces', 'grains.items', 'test.ping', 'state.running', 'status.meminfo',
@@ -121,7 +121,7 @@ class SaltAPI(object):
         content = self.postRequest(obj)
         ret = content['return'][0]
         return ret
-
+#预发环境部署模块，指定cmd.run运行用户
     def pre_remote_execution(self, tgt, pj, md5):
         ''' Shell command execution with parameters '''
         arg1 = 'python /ytxt/shell/deploy.py %s %s' % (pj, md5)
@@ -220,8 +220,7 @@ def main():
     # print a
     # hostname = 'prd-1|test1029-1'
     # jid=sapi.remote_noarg_execution(hostname, 'grains.items')
-    jid = sapi.pre_remote_execution('yf-pic-181.189read.com', 'productClient-1.0.4', '411425121212212')
-    print jid
+
     up_host = sapi.runner_status('status')['up']
     os_list = []
     os_release = []
