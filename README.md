@@ -17,7 +17,7 @@ Show minion OS release CPU Mem Interface Disk ..
 ![image](https://github.com/yueyongyue/saltshaker/blob/master/screenshots/2015-12-14_160850.png)
 
 Run Shell Command
-![image](https://raw.githubusercontent.com/xuhengpw/saltshakerxh/master/screenshots/2015-12-14_160940.png)
+![image](https://raw.githubusercontent.com/xuhengpw/saltshakerxh/master/screenshots/2015-12-14_160941.png)
 
 Job list
 ![image](https://github.com/yueyongyue/saltshaker/blob/master/screenshots/2015-12-14_160959.png)
