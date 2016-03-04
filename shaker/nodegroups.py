@@ -18,7 +18,7 @@ class NodeGroups(object):
             z = i.split('\n')[0]
             nodegroups += [z]
         return nodegroups
-
+#原字典返回，改造成列表 数组返回，前端可排序
     def list_groups_hosts(self):
         all_group_host = {}
         os.system("sed '1d' /etc/salt/master.d/nodegroups.conf | awk '{print $1}' |awk -F: '{print $1}' > /tmp/nodegroups")
